@@ -1082,7 +1082,10 @@ div#head-container {
 .inner-center .woocommerce form .form-row label,
 .inner-center .woocommerce form h3,
 .inner-center .woocommerce-breadcrumb,
-.woocommerce .inner-center h1.page-title{
+.woocommerce .inner-center h1.page-title,
+.woocommerce .inner-center  div.product .product_title,
+.woocommerce .inner-center  div.product p.price,
+.woocommerce .inner-center  div.product .woocommerce-tabs{
 	text-align:left;
 }
 
@@ -1090,6 +1093,8 @@ div#head-container {
 .inner-center .woocommerce form .form-row textarea{
 	padding:5px 10px;
 }
+
+
 
 /***** Start responsive ****/
 
@@ -1155,8 +1160,11 @@ div#head-container {
 	}
 }
 
-@media only screen and (max-width: 480) {
+@media only screen and (max-width: 480px) {
 	.cta-block{
+		width:100%;
+	}
+	.one-third{
 		width:100%;
 	}
 }
