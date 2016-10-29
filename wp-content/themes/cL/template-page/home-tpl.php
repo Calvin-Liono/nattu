@@ -23,7 +23,7 @@ get_header(); ?>
                         <?php the_sub_field('cta_heading'); ?>
                     </div>
                     <div class="cta-image">
-                        <img src="<?php the_sub_field('cta_image'); ?>">
+                        <a href="<?php the_sub_field('cta_link'); ?>"><img src="<?php the_sub_field('cta_image'); ?>"></a>
                     </div>
                     <div class="cta-text">
                         <?php the_sub_field('cta_excerpt'); ?>

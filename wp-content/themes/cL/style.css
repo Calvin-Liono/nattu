@@ -1161,6 +1161,37 @@ ul.product-categories li {
 	line-height: 1.5;
 }
 
+.repeater-product {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+
+.repeater-left {
+	float: left;
+	width: 50%;
+	padding: 10px;
+}
+
+.repeater-right {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	text-align: left;
+}
+
+.repeater-heading {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.repeater-button a {
+	padding: 10px 20px;
+	background: black;
+	color: white;
+	display: inline-block;
+}
+
 /***** Start responsive ****/
 
 @media only screen and (max-width: 1200px){
@@ -1223,6 +1254,9 @@ ul.product-categories li {
 	.menu-main-container ul li a:hover{
 		background: #c6952c;
 	}
+    .repeater-left, .repeater-right {
+        width:100%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
