@@ -6,6 +6,13 @@
 
 get_header(); ?>
 
+<div class="owl-carousel" id="owl-project">
+    <?php $images = get_field('home_page_banner');
+    foreach ($images as $image): ?>
+        <img class="lazyOwl" data-src="<?php echo $image['sizes']['banner']; ?>" src="<?php echo $image['sizes']['banner']; ?>">
+    <?php endforeach;?>
+</div>
+
 <div class="cta-div">
     <div class="container">
         <?php
@@ -32,6 +39,20 @@ get_header(); ?>
     </div>
 </div>
 
+<script>
+    jQuery(window).load(function(){
+        jQuery("#owl-project").owlCarousel({
+            items : 1,
+            lazyLoad : true,
+            loop : true,
+            margin : 0,
+            autoplay : true,
+            nav : true,
+            navigationText : ["left","right"],
+        });
+    });
+</script>
 
 <?php
 get_footer();
+

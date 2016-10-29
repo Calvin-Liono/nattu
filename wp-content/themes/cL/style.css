@@ -944,15 +944,16 @@ a:hover, a:visited, a:active{
 
 .menu-main-container ul li {
 	float: left;
-	padding: 10px 53px;
+	padding:  5px 53px 10px;
 }
 
 .menu-main-container ul li a {
-	padding: 10px 5px 0;
+	padding: 0 5px 0;
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 21px;
 	border-bottom: 1px solid transparent;
+	font-weight: bold;
 }
 
 .menu-main-container ul li.current-menu-item a{
@@ -1094,7 +1095,71 @@ div#head-container {
 	padding:5px 10px;
 }
 
+.owl-nav {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	vertical-align: middle;
+	width: 100%;
+}
 
+.owl-prev {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	height: 40px;
+	width: 40px;
+	background: url("images/left-arrow.png");
+	color: transparent;
+}
+
+.owl-next{
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	height: 40px;
+	width: 40px;
+	background: url("images/right-arrow.png");
+	color: transparent;
+}
+
+.product_meta {
+	text-align: left;
+}
+
+.archive-sidebar {
+	width: 25%;
+	float: left;
+	text-align: left;
+}
+
+.archive-main {
+	width: 75%;
+	float: left;
+}
+
+ul.product-categories {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: none;
+}
+
+ul.product-categories li {
+	font-size: 17px;
+	margin-bottom: 10px;
+	padding: 0 0 10px 5px;
+	border-bottom: 1px solid black;
+}
+
+.archive-main .inner-center {
+	padding: 0 30px;
+}
+
+.archive-main h1 {
+	font-size: 28px;
+	line-height: 1.5;
+}
 
 /***** Start responsive ****/
 
@@ -1133,7 +1198,7 @@ div#head-container {
 		background-position-x: 96%;
 	}
 	.menu-section{
-		display: none;
+		/*display: none;*/
 		position:relative;
 	}
 	.menu-main-container{

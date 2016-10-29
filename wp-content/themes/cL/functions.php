@@ -115,6 +115,16 @@ function _s_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => 'Woocommerce Sidebar',
+		'id'            => 'woo-sidebar',
+		'description'   => 'Widget to show Woocommerce sidebar',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', '_s_widgets_init' );
 
@@ -133,6 +143,10 @@ function _s_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_style( 'owl-css',  get_template_directory_uri() . '/css/owl.carousel.css' );
+
+	wp_enqueue_script( 'owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
@@ -187,3 +201,13 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
 }
+
+
+/****** Remove breadcrumb in woocommerce *******/
+
+remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
+
+/******* Add image size *********/
+
+add_image_size('banner', 1920,500,1);

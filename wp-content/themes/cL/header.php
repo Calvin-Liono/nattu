@@ -29,9 +29,9 @@
 			<div class="logo-section">
 				<a href="/"><img src="<?php the_field("site_logo", "option"); ?>"></a>
 			</div>
-			<div class="mobile-menu" style="display:none">
+			<!--<div class="mobile-menu" style="display:none">
 				Menu
-			</div>
+			</div>-->
 			<div class="menu-section">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>
@@ -39,9 +39,9 @@
 		</div>
 	</header><!-- #masthead -->
 
-	<?php if ( is_front_page() ) { ?>
+	<?php /*if ( is_front_page() ) { */?><!--
 		<div class="big-background">
-			<img class="big-padding" src="<?php the_field("site_mid_logo", "option"); ?>">
+			<img class="big-padding" src="<?php /*the_field("site_mid_logo", "option"); */?>">
 		</div>
-	<?php } ?>
+	--><?php /*} */?>
 	<div id="content" class="site-content">
